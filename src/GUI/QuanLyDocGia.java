@@ -94,8 +94,6 @@ public class QuanLyDocGia extends JFrame {
         BtnPanel.setPreferredSize(new Dimension(900, 50));
         SouthPanel.add(BtnPanel, BorderLayout.NORTH);
         JPanel TablePanel = new JPanel();
-        JTable table = new JTable();
-        TablePanel.add(table);
         TablePanel.setBackground(Color.MAGENTA);
         TablePanel.setPreferredSize(new Dimension(900, 200));
         SouthPanel.add(TablePanel, BorderLayout.SOUTH);

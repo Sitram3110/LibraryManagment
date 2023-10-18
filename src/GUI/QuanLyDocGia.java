@@ -34,9 +34,9 @@ public class QuanLyDocGia extends JFrame {
         // Đặt màu nền
         NorthPanel.setBackground(Color.YELLOW);
         SouthPanel.setBackground(Color.GREEN);
-        CenterPanel.setBackground(Color.PINK);
-        EastPanel.setBackground(Color.CYAN);
-        WestPanel.setBackground(Color.LIGHT_GRAY);
+        CenterPanel.setBackground(new Color(255, 255, 204));
+        EastPanel.setBackground(new Color(255, 255, 204));
+        WestPanel.setBackground(new Color(255, 255, 204));
 
         // chỉnh kích thước panel
         NorthPanel.setPreferredSize(new Dimension(900, 50));

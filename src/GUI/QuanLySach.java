@@ -40,17 +40,17 @@ public class QuanLySach extends JFrame {
 
         JPanel bookEast = new JPanel();
         bookEast.setPreferredSize(new Dimension(50, 300));
-        bookEast.setBackground(Color.CYAN);
+        bookEast.setBackground(new Color(255, 255, 204));
         BookManagement.add(bookEast, BorderLayout.EAST);
 
         JPanel bookWest = new JPanel();
         bookWest.setPreferredSize(new Dimension(500, 300));
-        bookWest.setBackground(Color.GREEN);
+        bookWest.setBackground(new Color(255, 255, 204));
         BookManagement.add(bookWest, BorderLayout.WEST);
 
         JPanel bookCenter = new JPanel();
         bookCenter.setPreferredSize(new Dimension(350, 300));
-        bookCenter.setBackground(Color.YELLOW);
+        bookCenter.setBackground(new Color(255, 255, 204));
         BookManagement.add(bookCenter, BorderLayout.CENTER);
         // Category
         CategoryManagement = new JPanel();
@@ -312,8 +312,9 @@ public class QuanLySach extends JFrame {
         GenreManagement.add(GenreCenter, BorderLayout.CENTER);
         // set background color
         GenreNorth.setBackground(Color.CYAN);
-        GenreCenter.setBackground(Color.GREEN);
-        GenreEast.setBackground(Color.RED);
+        GenreCenter.setBackground(new Color(255, 255, 204));
+        GenreEast.setBackground(new Color(255, 255, 204));
+        GenreWest.setBackground(new Color(255, 255, 204));
 
         // config component
         JLabel genreLabel = new JLabel("QUAN LY THE LOAI");
@@ -405,8 +406,9 @@ public class QuanLySach extends JFrame {
         AuthManagement.add(AuthCenter, BorderLayout.CENTER);
         // set background color
         AuthNorth.setBackground(Color.CYAN);
-        AuthCenter.setBackground(Color.GREEN);
-        AuthEast.setBackground(Color.LIGHT_GRAY);
+        AuthCenter.setBackground(new Color(255, 255, 204));
+        AuthEast.setBackground(new Color(255, 255, 204));
+        AuthWest.setBackground(new Color(255, 255, 204));
 
         // config component
         JLabel AuthLabel = new JLabel("QUAN LY Tac Gia");

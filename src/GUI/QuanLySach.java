@@ -68,17 +68,17 @@ public class QuanLySach extends JFrame {
 
         JPanel CategoryEast = new JPanel();
         CategoryEast.setPreferredSize(new Dimension(100, 400));
-        CategoryEast.setBackground(Color.CYAN);
+        CategoryEast.setBackground(new Color(255, 255, 204));
         CategoryManagement.add(CategoryEast, BorderLayout.EAST);
 
         JPanel CategoryWest = new JPanel();
         CategoryWest.setPreferredSize(new Dimension(400, 400));
-        CategoryWest.setBackground(Color.GREEN);
+        CategoryWest.setBackground(new Color(255, 255, 204));
         CategoryManagement.add(CategoryWest, BorderLayout.WEST);
 
         JPanel CategoryCenter = new JPanel();
         CategoryCenter.setPreferredSize(new Dimension(400, 400));
-        CategoryCenter.setBackground(Color.GRAY);
+        CategoryCenter.setBackground(new Color(255, 255, 204));
         CategoryManagement.add(CategoryCenter, BorderLayout.CENTER);
 
         maSach = new JLabel("Ma Sach");

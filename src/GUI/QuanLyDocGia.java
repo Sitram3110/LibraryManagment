@@ -98,7 +98,7 @@ public class QuanLyDocGia extends JFrame {
         TablePanel.add(table);
         TablePanel.setBackground(Color.MAGENTA);
         TablePanel.setPreferredSize(new Dimension(900, 200));
-        SouthPanel.add(TablePanel, BorderLayout.CENTER);
+        SouthPanel.add(TablePanel, BorderLayout.SOUTH);
 
         // Create the Btn Func
         JButton AddBtn = new JButton("Thêm mới");

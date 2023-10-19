@@ -54,7 +54,15 @@ public class TraCuu extends JFrame {
         JTextField genreFilt = new JTextField();
         genreFilt.setPreferredSize(new Dimension(200, 30));
         center.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(5, 5, 5, 5); // Add some padding
+        // Add components to center with specified constraints
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        center.add(maDocgia, gbc);
 
+        gbc.gridx = 1;
+        center.add(maDocgiaField, gbc);
     }
 
     public static void main(String[] args) {

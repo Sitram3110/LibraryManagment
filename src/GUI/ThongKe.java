@@ -32,6 +32,7 @@ public class ThongKe extends JFrame {
         readerStatic.add(ReaderEast, BorderLayout.EAST);
         readerStatic.add(ReaderWest, BorderLayout.WEST);
         readerStatic.add(ReaderCenter, BorderLayout.CENTER);
+        ReaderCenter.setPreferredSize(new Dimension(700, 300));
         // bookStatic
         bookStatic.add(bookNorth, BorderLayout.NORTH);
         bookStatic.add(bookSouth, BorderLayout.SOUTH);
@@ -57,13 +58,15 @@ public class ThongKe extends JFrame {
         readerTable = new JTable(tableModel);
         readerTable.getTableHeader().setResizingAllowed(false);
         panelReader.add(readerTable);
-        readerSouth.add(new JScrollPane(readerTable), BorderLayout.CENTER);
+        readerSouth.setLayout(new BorderLayout());
+        readerSouth.add(new JScrollPane(panelReader), BorderLayout.CENTER);
 
         // create tabbed
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.addTab("Thong Ke Ban Doc", readerStatic);
         tabbedPane.addTab("Thong Ke Sach", bookStatic);
         tabbedPane.addTab("Thong Ke Tine Phat", fineStatic);
+        add(tabbedPane);
 
     }
 

@@ -1,6 +1,8 @@
 package GUI;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+
 import java.awt.*;
 
 public class TraCuu extends JFrame {
@@ -25,8 +27,8 @@ public class TraCuu extends JFrame {
 
         // Set preferred size for panels
         north.setPreferredSize(new Dimension(900, 50));
-        south.setPreferredSize(new Dimension(900, 350));
-        center.setPreferredSize(new Dimension(900, 100)); // Adjusted the width to match the frame
+        south.setPreferredSize(new Dimension(900, 250));
+        center.setPreferredSize(new Dimension(700, 200)); // Adjusted the width to match the frame
         center.setBackground(new Color(255, 255, 204));
 
         // Add panels to the layout
@@ -53,16 +55,47 @@ public class TraCuu extends JFrame {
         JLabel genreFiltLabel = new JLabel("Loc theo the loai");
         JTextField genreFilt = new JTextField();
         genreFilt.setPreferredSize(new Dimension(200, 30));
+
+        // create comboBox
+        JComboBox<String> catefiltBox, genrefiltBox;
+        // create combobox for panelBot
+        String[] category = { "--Tim theo danh muc--", "Phi công", "Tiếp viên", "Bán vé" };
+        catefiltBox = new JComboBox<>(category);
+        String[] genre = { "--Tim theo danh muc--", "Phi công", "Tiếp viên", "Bán vé" };
+        genrefiltBox = new JComboBox<>(genre);
+
+        // crate Table
+        JTable searchTable = new JTable();
+        String[] columnNames = { "employeexxx", "user_name", "pass", "position", "surname", "name", "gender", "birth",
+                "email", "phone", "address" };
+        // add table
+        south.add(searchTable);
+        DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
+        searchTable = new JTable(tableModel);
+        searchTable.getTableHeader().setResizingAllowed(false);
+        JPanel panelTable = new JPanel();
+        panelTable.setPreferredSize(new Dimension(900, 250));
+        panelTable.add(searchTable);
+        south.setLayout(new BorderLayout());
+        south.add(new JScrollPane(searchTable), BorderLayout.NORTH);
+        // south.setBackground(Color.CYAN);
         center.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5, 5, 5, 5); // Add some padding
         // Add components to center with specified constraints
         gbc.gridx = 0;
         gbc.gridy = 0;
-        center.add(maDocgia, gbc);
+        center.add(cateFiltLabel, gbc);
 
         gbc.gridx = 1;
-        center.add(maDocgiaField, gbc);
+        center.add(catefiltBox, gbc);
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        center.add(genreFiltLabel, gbc);
+
+        gbc.gridx = 1;
+        center.add(genrefiltBox, gbc);
+
     }
 
     public static void main(String[] args) {

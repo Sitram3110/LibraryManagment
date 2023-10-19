@@ -61,8 +61,8 @@ public class QuanLyMuonTra extends JFrame {
         importManagement.add(importNorth, BorderLayout.NORTH);
 
         JPanel importSouth = new JPanel();
-        importSouth.setPreferredSize(new Dimension(900, 50));
-        importSouth.setBackground(Color.GRAY);
+        importSouth.setPreferredSize(new Dimension(900, 350));
+        importSouth.setBackground(new Color(255, 255, 204));
         importManagement.add(importSouth, BorderLayout.SOUTH);
 
         JPanel importEast = new JPanel();
@@ -76,7 +76,7 @@ public class QuanLyMuonTra extends JFrame {
         importManagement.add(importWest, BorderLayout.WEST);
 
         JPanel importCenter = new JPanel();
-        importCenter.setPreferredSize(new Dimension(500, 400));
+        importCenter.setPreferredSize(new Dimension(500, 100));
         importCenter.setBackground(new Color(255, 255, 204));
         importManagement.add(importCenter, BorderLayout.CENTER);
 
@@ -122,11 +122,28 @@ public class QuanLyMuonTra extends JFrame {
 
         // Add BorrowTable to TablePanel
         borrowTablePanel.add(new JScrollPane(BorrowTable));
-
+        /////
+        // importManagement
+        // create JLabel
+        JLabel importInfo = new JLabel("Danh sach phieu nhap sach");
+        importInfo.setFont(new Font("Segoe UI", Font.BOLD, 30));
+        importNorth.add(importInfo);
+        JTextField searchbar = new JTextField();
+        searchbar.setPreferredSize(new Dimension(200, 30));
+        importCenter.add(searchbar);
+        // create the JTable
+        JTable importTable = new JTable();
+        // add JTable
+        String[] element = { "employee_id", "user_name", "pass", "position", "surname", "name", "gender", "birth",
+                "email", "phone", "address" };
+        DefaultTableModel importTableModel = new DefaultTableModel(element, 0);
+        importTable = new JTable(importTableModel);
+        importTable.getTableHeader().setResizingAllowed(false);
+        importSouth.add(new JScrollPane(importTable));
         // Create tabbed pane
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.addTab("Danh Sách Phiếu Mượn", BorrowManagement);
-        tabbedPane.addTab("Danh Sách Phiếu Trả", importManagement);
+        tabbedPane.addTab("Danh Sách Phiếu Nhập", importManagement);
         add(tabbedPane);
     }
 

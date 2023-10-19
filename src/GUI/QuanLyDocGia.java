@@ -33,7 +33,7 @@ public class QuanLyDocGia extends JFrame {
         JPanel EastPanel = new JPanel();
         // Đặt màu nền
         NorthPanel.setBackground(Color.YELLOW);
-        SouthPanel.setBackground(Color.GREEN);
+        SouthPanel.setBackground(new Color(255, 255, 204));
         CenterPanel.setBackground(new Color(255, 255, 204));
         EastPanel.setBackground(new Color(255, 255, 204));
         WestPanel.setBackground(new Color(255, 255, 204));
@@ -90,11 +90,11 @@ public class QuanLyDocGia extends JFrame {
         SouthPanel.setLayout(new BorderLayout());
         JPanel BtnPanel = new JPanel();
         BtnPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
-        BtnPanel.setBackground(Color.GREEN);
+        BtnPanel.setBackground(new Color(255, 255, 204));
         BtnPanel.setPreferredSize(new Dimension(900, 50));
         SouthPanel.add(BtnPanel, BorderLayout.NORTH);
         JPanel TablePanel = new JPanel();
-        TablePanel.setBackground(Color.MAGENTA);
+        TablePanel.setBackground(new Color(255, 255, 255));
         TablePanel.setPreferredSize(new Dimension(900, 200));
         SouthPanel.add(TablePanel, BorderLayout.SOUTH);
 
